@@ -1,0 +1,46 @@
+<form [formGroup]="myForm" novalidate (ngSubmit)="save(myForm.value, myForm.valid)">
+
+    <!-- We'll add our form controls here -->
+    <div>
+    <label>Name</label>
+    <input type="text" formControlName="name">
+    <small [hidden]="myForm.controls.name.valid || (myForm.controls.name.pristine && !submitted)">
+        Name is required (minimum 5 characters).
+    </small>
+    </div>
+    
+    <div>
+    <label>Poster</label>
+    <input type="text" formControlName="poster">
+    <small [hidden]="myForm.controls.name.valid || (myForm.controls.name.pristine && !submitted)">
+        Poster is required (minimum 5 characters).
+    </small>
+    </div>
+    
+    <div>
+    <label>Biography</label>
+    <input type="text" formControlName="biography">
+    <small [hidden]="myForm.controls.name.valid || (myForm.controls.name.pristine && !submitted)">
+        Biography is required (minimum 5 characters).
+    </small>
+    </div>
+    
+    <div>
+    <label>Birthday</label>
+    <input type="text" formControlName="birthday">
+    <small [hidden]="myForm.controls.name.valid || (myForm.controls.name.pristine && !submitted)">
+        Birthday is required (minimum 5 characters).
+    </small>
+    </div>
+    
+    <div>
+    <label>Nationality</label>
+    <input type="text" formControlName="nationality">
+    <small [hidden]="myForm.controls.name.valid || (myForm.controls.name.pristine && !submitted)">
+        Nationality is required (minimum 5 characters).
+    </small>
+    </div>
+
+    <button type="submit">Submit</button>
+
+</form>
